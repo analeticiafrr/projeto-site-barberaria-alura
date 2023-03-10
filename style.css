@@ -1,0 +1,322 @@
+.body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li{
+	display: inline;
+	margin:0 0 0 15px;
+}
+
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+nav a:hover{
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos li { 
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+	
+}
+
+.produtos li:hover{
+	border-color: #C78C19;
+}
+
+.produtos li:active{
+	border-color: #088C19;
+}
+
+.produtos li:hover h2{
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer{ text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+
+}
+
+.copyright{
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+form {
+	margin: 40px 60px;
+}
+
+form label, form legend {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox{
+	margin: 20px 0;
+}
+
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: #ff8c00;
+	transform: scale(1.2);
+}
+
+table {
+	margin: 20px 60px 40px;
+}
+
+thead{
+	background: #555555;
+	color: white;
+	font-weight: bold; 
+}
+
+th, td{
+	border: 1px solid black;
+	padding: 8px 15px;
+}
+
+/* css d pagina inicial*/
+.banner{
+	width: 100%;
+}
+
+.titulo-principal{
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+}
+/*em é a medida proporcional para px
+  ou seja 2em = 2 vezes o titulo base que é de 15px*/
+
+.principal{
+	padding: 3em 0;
+	background: #fefefe;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 150px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#fefefe, #888888);
+}
+/*linear-gradient() = faz degradê automatico de quantas cores quiser
+linear-gradient(deg, 0 cor, 50% cor)= o deg marca o angulo que as cores vão ser mostradas
+radial-gradient() = mesma coisa, mas em circulo*/
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5;
+}
+/*line-height = altura de linha/espaço entre elas*/
+
+/*:first-child = marca o primeiro elemento
+last-child = ultimo elemento
+nht-children() = qualquer elemento */
+.itens:first-child {
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "★ ";
+}
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 15px #000000;
+}
+
+
+.video{
+	width: 560px;
+	height: 315px;
+	margin: 7em auto 3em;
+	opacity: 1;
+	transition: 600ms;
+}
+
+.video:hover {
+	opacity: 0.5;
+	}
+
+
+/*design responsivo*/
+
+@media screen and (max-width: 480px) {
+	
+	header > div> h1 > img {
+		margin: 5px 0px 20px 0px;
+		width: 30%;
+	}
+	
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+		width: auto;
+		padding:  18px 20px 10px 20px;
+	}
+
+	.principal, .conteudo-beneficios, .mapa-conteudo, .video{
+		margin: 10px 20px 10px 20px;
+	}
+
+	nav {
+		position: static;
+		margin: 10px 0 10px 0;
+		text-align: center;
+	}
+
+	nav a {
+		font-size: 19px;
+		font-weight: 900;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.titulo-principal { 
+		font-size: 1.7em;
+	}
+
+	.lista-beneficios {
+		width: 100%;
+	}
+
+	.imagem-beneficios {
+		width: 70%;
+		text-align: center;
+		margin: 2em auto 0;
+		left: 50px;
+		position: relative;
+	}
+
+	.mapa, .beneficios {
+		padding: 18px 0px;
+	}
+
+	.video {
+		margin: 32px auto 10px;
+		width: 73%;
+		height: 73%;
+		
+	}
+
+	
+}
